@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="jamesquigley.baseconverter.ConverterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Value"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/valueInput"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:digits="0123456789abcdef" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valueInput"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:baselineAligned="false"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Binary"
+            android:id="@+id/radioBinary"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decimal"
+            android:id="@+id/radioDecimal"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hex"
+            android:id="@+id/radioHex"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/divider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Binary"
+        android:id="@+id/binaryLabel"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/convertedBinary"
+        android:layout_below="@+id/binaryLabel"
+        android:layout_centerHorizontal="true"
+        android:text="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Decimal"
+        android:id="@+id/decimalLabel"
+        android:layout_below="@+id/convertedBinary"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/convertedDecimal"
+        android:layout_below="@+id/decimalLabel"
+        android:layout_centerHorizontal="true"
+        android:text="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hex"
+        android:id="@+id/hexLabel"
+        android:layout_below="@+id/convertedDecimal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/convertedHex"
+        android:layout_below="@+id/hexLabel"
+        android:layout_centerHorizontal="true"
+        android:text="0" />
+
+</RelativeLayout>
