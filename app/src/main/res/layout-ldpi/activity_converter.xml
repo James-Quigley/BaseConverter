@@ -18,7 +18,7 @@
         android:id="@+id/title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp" />
+        android:layout_margin="4dp" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -27,8 +27,8 @@
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
         android:singleLine="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
         android:text="0"
         android:textAlignment="center"
         android:digits="0123456789abcdef" />
@@ -39,7 +39,7 @@
         android:layout_below="@+id/valueInput"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_margin="16dp"
+        android:layout_margin="4dp"
         android:baselineAligned="false"
         android:id="@+id/radioGroup">
 
@@ -85,7 +85,7 @@
         android:id="@+id/binaryLabel"
         android:layout_below="@+id/divider"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp" />
+        android:layout_margin="4dp" />
 
     <me.grantland.widget.AutofitTextView
         android:id="@+id/convertedBinary"
@@ -109,7 +109,7 @@
         android:id="@+id/decimalLabel"
         android:layout_below="@+id/convertedBinary"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp" />
+        android:layout_margin="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
         android:id="@+id/hexLabel"
         android:layout_below="@+id/convertedDecimal"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp" />
+        android:layout_margin="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
